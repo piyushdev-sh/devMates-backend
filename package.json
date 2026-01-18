@@ -1,0 +1,21 @@
+{
+  "name": "devmates",
+  "version": "1.0.0",
+  "description": "a app for making friends but only for developer or we can say only professinals like linkedIn",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "js"
+  ],
+  "author": "Piyush",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
