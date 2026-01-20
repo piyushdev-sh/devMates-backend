@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser"
 import profileRouter from "./routes/profileRoutes.js";
 // import connectionRouter from "./routes/connectionRoutes.js";
 import { userAuthMiddleware } from "./middlewares/auth.middleware.js";
+import connectionRouter from "./routes/connectionRoutes.js";
 const app = express()
 const startServer=async()=>{
     await connectDB()
@@ -23,7 +24,7 @@ app.use(express.json())
 app.use("/",authRouter)
 // app.use("/",userAuthMiddleware ,feedRouter)
 app.use("/",userAuthMiddleware, profileRouter)
-// app.use("/",userAuthMiddleware,connectionRouter)
+app.use("/",userAuthMiddleware,connectionRouter)
 
 
 
