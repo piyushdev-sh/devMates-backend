@@ -19,6 +19,9 @@ const userSchema = new Schema({
     password : {
         type : String,
         required : true,
+         minLength : 2,
+        maxLength : 20,
+        
     },
     photoUrl : {
         type : String,

@@ -6,7 +6,6 @@ import authRouter from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser"
 // import feedRouter from "./routes/feedRoutes.js";
 import profileRouter from "./routes/profileRoutes.js";
-// import connectionRouter from "./routes/connectionRoutes.js";
 import { userAuthMiddleware } from "./middlewares/auth.middleware.js";
 import connectionRouter from "./routes/connectionRoutes.js";
 const app = express()
