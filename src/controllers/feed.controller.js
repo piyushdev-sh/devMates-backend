@@ -1,5 +1,5 @@
-import Connection from "../models/connection.model"
-import User from "../models/user.model"
+import Connection from "../models/connection.model.js"
+import User from "../models/user.model.js"
 
 const getFeed = async (req, res) => {
   try {

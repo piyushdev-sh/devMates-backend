@@ -4,7 +4,7 @@ import connectDB from "./config/db.js";
 import 'dotenv/config'
 import authRouter from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser"
-// import feedRouter from "./routes/feedRoutes.js";
+import feedRouter from "./routes/feedRoutes.js";
 import profileRouter from "./routes/profileRoutes.js";
 import { userAuthMiddleware } from "./middlewares/auth.middleware.js";
 import connectionRouter from "./routes/connectionRoutes.js";
@@ -21,7 +21,7 @@ app.use(cookieParser())
 app.use(express.json())
 
 app.use("/",authRouter)
-// app.use("/",userAuthMiddleware ,feedRouter)
+app.use("/",userAuthMiddleware ,feedRouter)
 app.use("/",userAuthMiddleware, profileRouter)
 app.use("/",userAuthMiddleware,connectionRouter)
 
